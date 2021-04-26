@@ -13,11 +13,11 @@ function writePassword() {
 
   // passwordText.value = password;
 
-  passwordLength = prompt("Set number of characters for your password, 8 to 128.");
-  useLowercase = confirm("Use lowercase letters?");
-  useUppercase = confirm("Use uppercase letters?");
-  useNumbers = confirm("Use numbers?");
-  useSpecial = confirm("Use special characters?");
+  passwordLength = prompt("This program will provide a randomly-generated pasword using your input criteria. Enter number of characters for your password, 8 to 128.");
+  useLowercase = confirm("Use lowercase letters in the password? OK for yes, Cancel for no.");
+  useUppercase = confirm("Use uppercase letters in the password? OK for yes, Cancel for no.");
+  useNumbers = confirm("Use numbers in the password? OK for yes, Cancel for no.");
+  useSpecial = confirm("Use special characters in the password? OK for yes, Cancel for no.");
   
   if (useLowercase && useUppercase && useNumbers && useSpecial) {
     randomLuns();
