@@ -5,7 +5,7 @@ let passwordLength
 // Write password to the #password input
 function writePassword() {
   // let password = generatePassword();
-  let passwordText = document.querySelector("#password");
+  // let passwordText = document.querySelector("#password");
 
   let useUppercase;
   let useLowercase;
@@ -61,7 +61,7 @@ function writePassword() {
   else if (!useLowercase && !useUppercase && useNumbers && !useSpecial) {
     randomN();
   }
-  else if (!useLowercase && !useUppercase && !useNumbers && !useSpecial) {
+  else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
     randomS();
   }
   // TODO else {prompt again if they didn't select any character types}
@@ -122,6 +122,7 @@ let s = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".",
 
 // functions for each of the arrays
 function randomLuns() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     document.getElementById("password").innerHTML += lunsCharacter;
@@ -130,6 +131,7 @@ function randomLuns() {
 }
 
 function randomLun() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lunCharacter = lun[Math.floor(Math.random() * lun.length)];
     document.getElementById("password").innerHTML += lunCharacter;
@@ -138,6 +140,7 @@ function randomLun() {
 }
 
 function randomLu() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     luCharacter = lu[Math.floor(Math.random() * lu.length)];
     document.getElementById("password").innerHTML += luCharacter;
@@ -146,6 +149,7 @@ function randomLu() {
 }
 
 function randomL() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lCharacter = l[Math.floor(Math.random() * l.length)];
     document.getElementById("password").innerHTML += lCharacter;
@@ -154,6 +158,7 @@ function randomL() {
 }
 
 function randomLus() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lusCharacter = lus[Math.floor(Math.random() * lus.length)];
     document.getElementById("password").innerHTML += lusCharacter;
@@ -162,6 +167,7 @@ function randomLus() {
 }
 
 function randomLns() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lnsCharacter = lns[Math.floor(Math.random() * lns.length)];
     document.getElementById("password").innerHTML += lnsCharacter;
@@ -170,6 +176,7 @@ function randomLns() {
 }
 
 function randomUns() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     unsCharacter = uns[Math.floor(Math.random() * uns.length)];
     document.getElementById("password").innerHTML += unsCharacter;
@@ -178,6 +185,7 @@ function randomUns() {
 }
 
 function randomLn() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lnCharacter = ln[Math.floor(Math.random() * ln.length)];
     document.getElementById("password").innerHTML += lnCharacter;
@@ -186,6 +194,7 @@ function randomLn() {
 }
 
 function randomLs() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lsCharacter = ls[Math.floor(Math.random() * ls.length)];
     document.getElementById("password").innerHTML += lsCharacter;
@@ -194,6 +203,7 @@ function randomLs() {
 }
 
 function randomUn() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     unCharacter = un[Math.floor(Math.random() * un.length)];
     document.getElementById("password").innerHTML += unCharacter;
@@ -202,6 +212,7 @@ function randomUn() {
 }
 
 function randomUs() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     usCharacter = us[Math.floor(Math.random() * us.length)];
     document.getElementById("password").innerHTML += usCharacter;
@@ -210,6 +221,7 @@ function randomUs() {
 }
 
 function randomNs() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     nsCharacter = ns[Math.floor(Math.random() * ns.length)];
     document.getElementById("password").innerHTML += nsCharacter;
@@ -218,6 +230,7 @@ function randomNs() {
 }
 
 function randomU() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     uCharacter = u[Math.floor(Math.random() * u.length)];
     document.getElementById("password").innerHTML += uCharacter;
@@ -226,6 +239,7 @@ function randomU() {
 }
 
 function randomN() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     nCharacter = n[Math.floor(Math.random() * n.length)];
     document.getElementById("password").innerHTML += nCharacter;
@@ -234,6 +248,7 @@ function randomN() {
 }
 
 function randomS() {
+  document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     sCharacter = s[Math.floor(Math.random() * s.length)];
     document.getElementById("password").innerHTML += sCharacter;
