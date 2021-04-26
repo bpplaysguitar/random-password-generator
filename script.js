@@ -26,7 +26,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-generateBtn2.addEventListener("click", randomS);
+generateBtn2.addEventListener("click", randomLs);
 
 // function getRandomLowercase() {
 //   let lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -54,7 +54,7 @@ generateBtn2.addEventListener("click", randomS);
 
 
 //___________________________________________
-// Create arrays of all possible non-order-specific combinations of lower, upper, number, and special so in the end random characters will be selected from the appropriate array.
+// Create arrays of all possible non-order-specific combinations of lower, upper, number, and special so in the end random characters will be selected from the appropriate array using a corresponding function.
 // combinations of luns
 // luns
 // lun
@@ -119,6 +119,7 @@ let s = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".",
 //___________________________________________
 
 
+// functions for each of the arrays
 // TODO replace i<10 in all functions with i<length specified by user.
 function randomLuns() {
   for (let i = 0; i < 10; i++) {
