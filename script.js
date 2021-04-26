@@ -6,27 +6,70 @@ let generateBtn2 = document.querySelector("#generate2");
 function writePassword() {
   // let password = generatePassword();
   let passwordText = document.querySelector("#password");
-  
-  let passwordLength
-  let useUppercase
-  let useLowercase
-  let useSpecial
+
+  let passwordLength;
+  let useUppercase;
+  let useLowercase;
+  let useSpecial;
 
   passwordText.value = password;
 
   passwordLength = prompt("Set number of characters for your password, 8 to 128.");
-
-  useUppercase = confirm("Use uppercase letters?");
-
   useLowercase = confirm("Use lowercase letters?");
-
+  useUppercase = confirm("Use uppercase letters?");
+  useNumbers = confirm("Use numbers?");
   useSpecial = confirm("Use special characters?");
-
+  
+  if (useLowercase && useUppercase && useNumbers && useSpecial) {
+    randomLuns();
+  }
+  else if (useLowercase && useUppercase && useNumbers && !useSpecial) {
+    randomLun();
+  }
+  else if (useLowercase && useUppercase && !useNumbers && !useSpecial) {
+    randomLu();
+  }
+  else if (useLowercase && !useUppercase && !useNumbers && !useSpecial) {
+    randomL();
+  }
+  else if (useLowercase && useUppercase && !useNumbers && useSpecial) {
+    randomLus();
+  }
+  else if (useLowercase && !useUppercase && useNumbers && useSpecial) {
+    randomLns();
+  }
+  else if (!useLowercase && useUppercase && useNumbers && useSpecial) {
+    randomUns();
+  }
+  else if (useLowercase && !useUppercase && useNumbers && !useSpecial) {
+    randomLn();
+  }
+  else if (useLowercase && useUppercase && !useNumbers && useSpecial) {
+    randomLs();
+  }
+  else if (!useLowercase && useUppercase && useNumbers && !useSpecial) {
+    randomUn();
+  }
+  else if (!useLowercase && useUppercase && !useNumbers && useSpecial) {
+    randomUs();
+  }
+  else if (!useLowercase && !useUppercase && useNumbers && useSpecial) {
+    randomNs();
+  }
+  else if (!useLowercase && useUppercase && !useNumbers && !useSpecial) {
+    randomU();
+  }
+  else if (!useLowercase && !useUppercase && useNumbers && !useSpecial) {
+    randomN();
+  }
+  else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
+    randomS();
+  }
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-generateBtn2.addEventListener("click", randomLs);
+generateBtn2.addEventListener("click", randomLuns);
 
 // function getRandomLowercase() {
 //   let lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
