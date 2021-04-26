@@ -43,7 +43,7 @@ function writePassword() {
   else if (useLowercase && !useUppercase && useNumbers && !useSpecial) {
     randomLn();
   }
-  else if (useLowercase && useUppercase && !useNumbers && useSpecial) {
+  else if (useLowercase && !useUppercase && !useNumbers && useSpecial) {
     randomLs();
   }
   else if (!useLowercase && useUppercase && useNumbers && !useSpecial) {
