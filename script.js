@@ -1,13 +1,13 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");  
 let generateBtn2 = document.querySelector("#generate2");  
+let passwordLength
 
 // Write password to the #password input
 function writePassword() {
   // let password = generatePassword();
   let passwordText = document.querySelector("#password");
 
-  let passwordLength;
   let useUppercase;
   let useLowercase;
   let useSpecial;
@@ -62,7 +62,7 @@ function writePassword() {
   else if (!useLowercase && !useUppercase && useNumbers && !useSpecial) {
     randomN();
   }
-  else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
+  else if (!useLowercase && !useUppercase && !useNumbers && !useSpecial) {
     randomS();
   }
 }
@@ -165,105 +165,105 @@ let s = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".",
 // functions for each of the arrays
 // TODO replace i<10 in all functions with i<length specified by user.
 function randomLuns() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     console.log(lunsCharacter);   
   }
 }
 
 function randomLun() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lunCharacter = lun[Math.floor(Math.random() * lun.length)];
     console.log(lunCharacter);   
   }
 }
 
 function randomLu() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     luCharacter = lu[Math.floor(Math.random() * lu.length)];
     console.log(luCharacter);   
   }
 }
 
 function randomL() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lCharacter = l[Math.floor(Math.random() * l.length)];
     console.log(lCharacter);   
   }
 }
 
 function randomLus() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lusCharacter = lus[Math.floor(Math.random() * lus.length)];
     console.log(lusCharacter);   
   }
 }
 
 function randomLns() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lnsCharacter = lns[Math.floor(Math.random() * lns.length)];
     console.log(lnsCharacter);   
   }
 }
 
 function randomUns() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     unsCharacter = uns[Math.floor(Math.random() * uns.length)];
     console.log(unsCharacter);   
   }
 }
 
 function randomLn() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lnCharacter = ln[Math.floor(Math.random() * ln.length)];
     console.log(lnCharacter);   
   }
 }
 
 function randomLs() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     lsCharacter = ls[Math.floor(Math.random() * ls.length)];
     console.log(lsCharacter);   
   }
 }
 
 function randomUn() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     unCharacter = un[Math.floor(Math.random() * un.length)];
     console.log(unCharacter);   
   }
 }
 
 function randomUs() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     usCharacter = us[Math.floor(Math.random() * us.length)];
     console.log(usCharacter);   
   }
 }
 
 function randomNs() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     nsCharacter = ns[Math.floor(Math.random() * ns.length)];
     console.log(nsCharacter);   
   }
 }
 
 function randomU() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     uCharacter = u[Math.floor(Math.random() * u.length)];
     console.log(uCharacter);   
   }
 }
 
 function randomN() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     nCharacter = n[Math.floor(Math.random() * n.length)];
     console.log(nCharacter);   
   }
 }
 
 function randomS() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(passwordLength); i++) {
     sCharacter = s[Math.floor(Math.random() * s.length)];
     console.log(sCharacter);   
   }
