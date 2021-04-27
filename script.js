@@ -14,6 +14,9 @@ function writePassword() {
   // passwordText.value = password;
 
   passwordLength = prompt("This program will provide a randomly-generated pasword using your input criteria. Enter number of characters for your password, 8 to 128.");
+  while (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
+    passwordLength = prompt("Error: Password must be 8 to 128 characters. Enter number of characters for your password, 8 to 128.");
+  }
   useLowercase = confirm("Use lowercase letters in the password? OK for yes, Cancel for no.");
   useUppercase = confirm("Use uppercase letters in the password? OK for yes, Cancel for no.");
   useNumbers = confirm("Use numbers in the password? OK for yes, Cancel for no.");
@@ -64,7 +67,7 @@ function writePassword() {
   else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
     randomS();
   }
-  // TODO else {prompt again if they didn't select any character types}
+  else {alert("Error: Cannot generate password as no character types were selected. Please click Generate Password button to start over.")}
 }
 
 // Add event listener to generate button
