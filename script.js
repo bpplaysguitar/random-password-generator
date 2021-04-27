@@ -63,6 +63,7 @@ function generatePassword() {
       "Error: Cannot generate password as no character types were selected. Please click Generate Password button to start over."
     );
   }
+  return;
 }
 
 // Add event listener to generate button
@@ -124,6 +125,7 @@ function randomLuns() {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     document.getElementById("password").innerHTML += lunsCharacter;
   }
+  return;
 }
 
 function randomLun() {
@@ -132,6 +134,7 @@ function randomLun() {
     lunCharacter = lun[Math.floor(Math.random() * lun.length)];
     document.getElementById("password").innerHTML += lunCharacter;  
   }
+  return;
 }
 
 function randomLu() {
@@ -140,6 +143,7 @@ function randomLu() {
     luCharacter = lu[Math.floor(Math.random() * lu.length)];
     document.getElementById("password").innerHTML += luCharacter;
   }
+  return;
 }
 
 function randomL() {
@@ -148,6 +152,7 @@ function randomL() {
     lCharacter = l[Math.floor(Math.random() * l.length)];
     document.getElementById("password").innerHTML += lCharacter;
   }
+  return;
 }
 
 function randomLus() {
@@ -156,6 +161,7 @@ function randomLus() {
     lusCharacter = lus[Math.floor(Math.random() * lus.length)];
     document.getElementById("password").innerHTML += lusCharacter;
   }
+  return;
 }
 
 function randomLns() {
@@ -164,6 +170,7 @@ function randomLns() {
     lnsCharacter = lns[Math.floor(Math.random() * lns.length)];
     document.getElementById("password").innerHTML += lnsCharacter;
   }
+  return;
 }
 
 function randomUns() {
@@ -172,6 +179,7 @@ function randomUns() {
     unsCharacter = uns[Math.floor(Math.random() * uns.length)];
     document.getElementById("password").innerHTML += unsCharacter;
   }
+  return;
 }
 
 function randomLn() {
@@ -180,6 +188,7 @@ function randomLn() {
     lnCharacter = ln[Math.floor(Math.random() * ln.length)];
     document.getElementById("password").innerHTML += lnCharacter;
   }
+  return;
 }
 
 function randomLs() {
@@ -188,6 +197,7 @@ function randomLs() {
     lsCharacter = ls[Math.floor(Math.random() * ls.length)];
     document.getElementById("password").innerHTML += lsCharacter;
   }
+  return;
 }
 
 function randomUn() {
@@ -196,6 +206,7 @@ function randomUn() {
     unCharacter = un[Math.floor(Math.random() * un.length)];
     document.getElementById("password").innerHTML += unCharacter;
   }
+  return;
 }
 
 function randomUs() {
@@ -204,6 +215,7 @@ function randomUs() {
     usCharacter = us[Math.floor(Math.random() * us.length)];
     document.getElementById("password").innerHTML += usCharacter;
   }
+  return;
 }
 
 function randomNs() {
@@ -212,6 +224,7 @@ function randomNs() {
     nsCharacter = ns[Math.floor(Math.random() * ns.length)];
     document.getElementById("password").innerHTML += nsCharacter;
   }
+  return;
 }
 
 function randomU() {
@@ -220,6 +233,7 @@ function randomU() {
     uCharacter = u[Math.floor(Math.random() * u.length)];
     document.getElementById("password").innerHTML += uCharacter;
   }
+  return;
 }
 
 function randomN() {
@@ -228,6 +242,7 @@ function randomN() {
     nCharacter = n[Math.floor(Math.random() * n.length)];
     document.getElementById("password").innerHTML += nCharacter;
   }
+  return;
 }
 
 function randomS() {
@@ -236,4 +251,5 @@ function randomS() {
     sCharacter = s[Math.floor(Math.random() * s.length)];
     document.getElementById("password").innerHTML += sCharacter;
   }
+  return;
 }
