@@ -1,80 +1,75 @@
 // Assignment Code
-let generateBtn = document.querySelector("#generate");    
-let passwordLength
+let generateBtn = document.querySelector("#generate");
+let passwordLength;
+let useLowercase;
+let useUppercase;
+let useNumbers;
+let useSpecial;
 
-// Write password to the #password input
-function writePassword() {
-  // let password = generatePassword();
-  // let passwordText = document.querySelector("#password");
-
-  let useUppercase;
-  let useLowercase;
-  let useSpecial;
-
-  // passwordText.value = password;
-
-  passwordLength = prompt("This program will provide a randomly-generated pasword using your input criteria. Enter number of characters for your password, 8 to 128.");
+function generatePassword() {
+  passwordLength = prompt(
+    "This program will provide a randomly-generated pasword using your input criteria. Enter number of characters for your password, 8 to 128."
+  );
   while (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
-    passwordLength = prompt("Error: Password must be 8 to 128 characters. Enter number of characters for your password, 8 to 128.");
+    passwordLength = prompt(
+      "Error: Password must be 8 to 128 characters. Enter number of characters for your password, 8 to 128."
+    );
   }
-  useLowercase = confirm("Use lowercase letters in the password? OK for yes, Cancel for no.");
-  useUppercase = confirm("Use uppercase letters in the password? OK for yes, Cancel for no.");
-  useNumbers = confirm("Use numbers in the password? OK for yes, Cancel for no.");
-  useSpecial = confirm("Use special characters in the password? OK for yes, Cancel for no.");
-  
+  useLowercase = confirm(
+    "Use lowercase letters in the password? OK for yes, Cancel for no."
+  );
+  useUppercase = confirm(
+    "Use uppercase letters in the password? OK for yes, Cancel for no."
+  );
+  useNumbers = confirm(
+    "Use numbers in the password? OK for yes, Cancel for no."
+  );
+  useSpecial = confirm(
+    "Use special characters in the password? OK for yes, Cancel for no."
+  );
+
   if (useLowercase && useUppercase && useNumbers && useSpecial) {
     randomLuns();
-  }
-  else if (useLowercase && useUppercase && useNumbers && !useSpecial) {
+  } else if (useLowercase && useUppercase && useNumbers && !useSpecial) {
     randomLun();
-  }
-  else if (useLowercase && useUppercase && !useNumbers && !useSpecial) {
+  } else if (useLowercase && useUppercase && !useNumbers && !useSpecial) {
     randomLu();
-  }
-  else if (useLowercase && !useUppercase && !useNumbers && !useSpecial) {
+  } else if (useLowercase && !useUppercase && !useNumbers && !useSpecial) {
     randomL();
-  }
-  else if (useLowercase && useUppercase && !useNumbers && useSpecial) {
+  } else if (useLowercase && useUppercase && !useNumbers && useSpecial) {
     randomLus();
-  }
-  else if (useLowercase && !useUppercase && useNumbers && useSpecial) {
+  } else if (useLowercase && !useUppercase && useNumbers && useSpecial) {
     randomLns();
-  }
-  else if (!useLowercase && useUppercase && useNumbers && useSpecial) {
+  } else if (!useLowercase && useUppercase && useNumbers && useSpecial) {
     randomUns();
-  }
-  else if (useLowercase && !useUppercase && useNumbers && !useSpecial) {
+  } else if (useLowercase && !useUppercase && useNumbers && !useSpecial) {
     randomLn();
-  }
-  else if (useLowercase && !useUppercase && !useNumbers && useSpecial) {
+  } else if (useLowercase && !useUppercase && !useNumbers && useSpecial) {
     randomLs();
-  }
-  else if (!useLowercase && useUppercase && useNumbers && !useSpecial) {
+  } else if (!useLowercase && useUppercase && useNumbers && !useSpecial) {
     randomUn();
-  }
-  else if (!useLowercase && useUppercase && !useNumbers && useSpecial) {
+  } else if (!useLowercase && useUppercase && !useNumbers && useSpecial) {
     randomUs();
-  }
-  else if (!useLowercase && !useUppercase && useNumbers && useSpecial) {
+  } else if (!useLowercase && !useUppercase && useNumbers && useSpecial) {
     randomNs();
-  }
-  else if (!useLowercase && useUppercase && !useNumbers && !useSpecial) {
+  } else if (!useLowercase && useUppercase && !useNumbers && !useSpecial) {
     randomU();
-  }
-  else if (!useLowercase && !useUppercase && useNumbers && !useSpecial) {
+  } else if (!useLowercase && !useUppercase && useNumbers && !useSpecial) {
     randomN();
-  }
-  else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
+  } else if (!useLowercase && !useUppercase && !useNumbers && useSpecial) {
     randomS();
+  } else {
+    alert(
+      "Error: Cannot generate password as no character types were selected. Please click Generate Password button to start over."
+    );
   }
-  else {alert("Error: Cannot generate password as no character types were selected. Please click Generate Password button to start over.")}
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 
-//___________________________________________
-// Create arrays of all possible non-order-specific combinations of lower, upper, number, and special so random characters will be selected from the appropriate array using a corresponding function. Note that I doubled up the instances of each number in order to help them be equally represented since they are much smaller in count than other characters.
+
+// Create arrays of all possible non-order-specific combinations of lower, upper, number, and special so random characters will be selected from the appropriate array using a corresponding function. Note that I doubled the instances of each number so they are more evenly represented since there are fewer numbers than there are characters of other types.
 
 // lower upper number special 
 let luns = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
@@ -120,7 +115,6 @@ let n = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 // special 
 let s = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-//___________________________________________
 
 
 // functions for each of the arrays
