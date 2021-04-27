@@ -123,7 +123,6 @@ function randomLuns() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     document.getElementById("password").innerHTML += lunsCharacter;
-    console.log(lunsCharacter);   
   }
 }
 
@@ -131,8 +130,7 @@ function randomLun() {
   document.getElementById("password").innerHTML = "";
   for (let i = 0; i < Number(passwordLength); i++) {
     lunCharacter = lun[Math.floor(Math.random() * lun.length)];
-    document.getElementById("password").innerHTML += lunCharacter;
-    console.log(lunCharacter);   
+    document.getElementById("password").innerHTML += lunCharacter;  
   }
 }
 
@@ -141,7 +139,6 @@ function randomLu() {
   for (let i = 0; i < Number(passwordLength); i++) {
     luCharacter = lu[Math.floor(Math.random() * lu.length)];
     document.getElementById("password").innerHTML += luCharacter;
-    console.log(luCharacter);   
   }
 }
 
@@ -150,7 +147,6 @@ function randomL() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lCharacter = l[Math.floor(Math.random() * l.length)];
     document.getElementById("password").innerHTML += lCharacter;
-    console.log(lCharacter);   
   }
 }
 
@@ -159,7 +155,6 @@ function randomLus() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lusCharacter = lus[Math.floor(Math.random() * lus.length)];
     document.getElementById("password").innerHTML += lusCharacter;
-    console.log(lusCharacter);   
   }
 }
 
@@ -168,7 +163,6 @@ function randomLns() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lnsCharacter = lns[Math.floor(Math.random() * lns.length)];
     document.getElementById("password").innerHTML += lnsCharacter;
-    console.log(lnsCharacter);   
   }
 }
 
@@ -177,7 +171,6 @@ function randomUns() {
   for (let i = 0; i < Number(passwordLength); i++) {
     unsCharacter = uns[Math.floor(Math.random() * uns.length)];
     document.getElementById("password").innerHTML += unsCharacter;
-    console.log(unsCharacter);   
   }
 }
 
@@ -186,7 +179,6 @@ function randomLn() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lnCharacter = ln[Math.floor(Math.random() * ln.length)];
     document.getElementById("password").innerHTML += lnCharacter;
-    console.log(lnCharacter);   
   }
 }
 
@@ -195,7 +187,6 @@ function randomLs() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lsCharacter = ls[Math.floor(Math.random() * ls.length)];
     document.getElementById("password").innerHTML += lsCharacter;
-    console.log(lsCharacter);   
   }
 }
 
@@ -204,7 +195,6 @@ function randomUn() {
   for (let i = 0; i < Number(passwordLength); i++) {
     unCharacter = un[Math.floor(Math.random() * un.length)];
     document.getElementById("password").innerHTML += unCharacter;
-    console.log(unCharacter);   
   }
 }
 
@@ -213,7 +203,6 @@ function randomUs() {
   for (let i = 0; i < Number(passwordLength); i++) {
     usCharacter = us[Math.floor(Math.random() * us.length)];
     document.getElementById("password").innerHTML += usCharacter;
-    console.log(usCharacter);   
   }
 }
 
@@ -222,7 +211,6 @@ function randomNs() {
   for (let i = 0; i < Number(passwordLength); i++) {
     nsCharacter = ns[Math.floor(Math.random() * ns.length)];
     document.getElementById("password").innerHTML += nsCharacter;
-    console.log(nsCharacter);   
   }
 }
 
@@ -231,7 +219,6 @@ function randomU() {
   for (let i = 0; i < Number(passwordLength); i++) {
     uCharacter = u[Math.floor(Math.random() * u.length)];
     document.getElementById("password").innerHTML += uCharacter;
-    console.log(uCharacter);   
   }
 }
 
@@ -240,7 +227,6 @@ function randomN() {
   for (let i = 0; i < Number(passwordLength); i++) {
     nCharacter = n[Math.floor(Math.random() * n.length)];
     document.getElementById("password").innerHTML += nCharacter;
-    console.log(nCharacter);   
   }
 }
 
@@ -249,6 +235,5 @@ function randomS() {
   for (let i = 0; i < Number(passwordLength); i++) {
     sCharacter = s[Math.floor(Math.random() * s.length)];
     document.getElementById("password").innerHTML += sCharacter;
-    console.log(sCharacter);   
   }
 }
