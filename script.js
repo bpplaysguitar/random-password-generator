@@ -5,6 +5,11 @@ let useLowercase;
 let useUppercase;
 let useNumbers;
 let useSpecial;
+let containsLower;
+let containsUpper;
+let containsNumber;
+let containsSpecial;
+
 
 function generatePassword() {
   passwordLength = prompt(
@@ -124,10 +129,33 @@ function randomLuns() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     document.getElementById("password").innerHTML += lunsCharacter;
-  } 
-    console.log(document.getElementById("password").textContent);
+
+    // check each character to identify instances of each character type
+    let checkedCharacter = document.getElementById("password").innerHTML.charCodeAt(i);
+    // check for lowercase
+    if (checkedCharacter >= 97 && checkedCharacter <= 122) {
+      containsLower = true;
+    }
+    // check for uppercase
+     else if (checkedCharacter >= 65 && checkedCharacter <= 90) {
+      containsUpper = true;
+    }
+    // check for number
+    else if (checkedCharacter >= 48 && checkedCharacter <= 57) {
+      containsNumber = true;
+    }
+    // check for special
+    else if ((checkedCharacter >= 33 && checkedCharacter <= 47) || (checkedCharacter >= 58 && checkedCharacter <= 64) || (checkedCharacter >= 91 && checkedCharacter <= 96) || (checkedCharacter >= 123 && checkedCharacter <= 126)) {
+      containsSpecial = true;
+    }
   
-  return;
+}
+  if (containsLower && containsUpper && containsNumber & containsSpecial) {
+    console.log("all 4 present!")
+   } else {
+     console.log("not all 4");
+   }
+   return;
 }
 
 function randomLun() {
