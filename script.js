@@ -124,7 +124,9 @@ function randomLuns() {
   for (let i = 0; i < Number(passwordLength); i++) {
     lunsCharacter = luns[Math.floor(Math.random() * luns.length)];
     document.getElementById("password").innerHTML += lunsCharacter;
-  }
+  } 
+    console.log(document.getElementById("password").textContent);
+  
   return;
 }
 
