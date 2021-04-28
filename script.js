@@ -5,11 +5,11 @@ let useLowercase;
 let useUppercase;
 let useNumbers;
 let useSpecial;
-let containsLower;
-let containsUpper;
-let containsNumber;
-let containsSpecial;
-
+let lowercaseAscii;
+let uppercaseAscii;
+let numberAscii;
+let specialAscii;
+let pwArray = [];
 
 function generatePassword() {
   passwordLength = prompt(
@@ -33,6 +33,7 @@ function generatePassword() {
     "Use special characters in the password? OK for yes, Cancel for no."
   );
 
+  // Depending on the repsonses to character types, we will run one of the functions named in these if statements. Each will pull from the character types specified, Lower, Upper, Number, Special.
   if (useLowercase && useUppercase && useNumbers && useSpecial) {
     randomLuns();
   } else if (useLowercase && useUppercase && useNumbers && !useSpecial) {
@@ -69,218 +70,47 @@ function generatePassword() {
     );
   }
   return;
+  }
+
+// WHAT I CAN'T BLOODY FIGURE OUT: (using functions below this section)
+// randomLuns() {
+//  if pwArray.length is less than passwordLength, run getLowercase() to push one lowercase character to the array. At this point pwArray has 1 character in it.
+// 
+// if pwArray.length is less than passwordLength, run getUppercase() to push one uppercase character to the array. At this point pwArray has 2 characters in it.
+// 
+// if pwArray.length is less than passwordLength, run getNumber() to push a number character to the array.
+// 
+// if pwArray.length is lesss than passwordLength, run getSpecial() to push a special char to the array.
+//
+// go back to beginning to see if you need to run getLower()
+//
+// when pwArray.length is the same as passwordLength, stop pushing to the array. 
+// }
+
+
+
+
+// functions to get a single character from each character type 
+function getLowercase() {
+  let lowercaseAscii = Math.floor(Math.random() * 26) + 97;
+  pwArray.push(lowercaseAscii);
+}
+
+function getUppercase() {
+  let uppercaseAscii = Math.floor(Math.random() * 26) + 65;
+  pwArray.push(uppercaseAscii);
+}
+
+function getNumber() {
+  let numberAscii = Math.floor(Math.random() * 10) + 48;
+  pwArray.push(numberAscii);
+} 
+
+function getSpecial() {
+  let specialArray = [33, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96, 123, 124, 125, 126]
+  let specialAscii = specialArray[Math.floor(Math.random() * specialArray.length)];
+  pwArray.push(specialAscii);
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
-
-
-// Create arrays of all possible non-order-specific combinations of lower, upper, number, and special so random characters will be selected from the appropriate array using a corresponding function. Note that I doubled the instances of each number so they are more evenly represented since there are fewer numbers than there are characters of other types.
-
-// lower upper number special 
-let charArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// lower upper number
-// let lun = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
-// // lower upper 
-// let lu = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-// // lower 
-// let l = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
-// // lower upper special 
-// let lus = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // lower number special 
-// let lns = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // upper number special 
-// let uns = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // lower number
-// let ln = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
-// // lower special 
-// let ls = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // upper number 
-// let un = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
-// // upper special 
-// let us = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // number special 
-// let ns = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-// // upper
-// let u = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-// // number 
-// let n = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
-// // special 
-// let s = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
-
-
-// functions for each of the arrays
-function randomLuns() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lunsCharacter = charArray[Math.floor(Math.random() * charArray.length)];
-    document.getElementById("password").innerHTML += lunsCharacter;
-
-    // check each character to identify instances of each character type
-    let checkedCharacter = document.getElementById("password").innerHTML.charCodeAt(i);
-    // check for lowercase
-    if (checkedCharacter >= 97 && checkedCharacter <= 122) {
-      containsLower = true;
-    }
-    // check for uppercase
-     else if (checkedCharacter >= 65 && checkedCharacter <= 90) {
-      containsUpper = true;
-    }
-    // check for number
-    else if (checkedCharacter >= 48 && checkedCharacter <= 57) {
-      containsNumber = true;
-    }
-    // check for special
-    else if ((checkedCharacter >= 33 && checkedCharacter <= 47) || (checkedCharacter >= 58 && checkedCharacter <= 64) || (checkedCharacter >= 91 && checkedCharacter <= 96) || (checkedCharacter >= 123 && checkedCharacter <= 126)) {
-      containsSpecial = true;
-    }
-  
-}
-  if (containsLower && containsUpper && containsNumber && containsSpecial) {
-    console.log("all 4 present!")
-   } else {
-     console.log("not all 4");
-     randomLuns();
-   }
-   return;
-}
-
-function randomLun() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lunCharacter = lun[Math.floor(Math.random() * lun.length)];
-    document.getElementById("password").innerHTML += lunCharacter;  
-  }
-  return;
-}
-
-function randomLu() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    luCharacter = lu[Math.floor(Math.random() * lu.length)];
-    document.getElementById("password").innerHTML += luCharacter;
-  }
-  return;
-}
-
-function randomL() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lCharacter = l[Math.floor(Math.random() * l.length)];
-    document.getElementById("password").innerHTML += lCharacter;
-  }
-  return;
-}
-
-function randomLus() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lusCharacter = lus[Math.floor(Math.random() * lus.length)];
-    document.getElementById("password").innerHTML += lusCharacter;
-  }
-  return;
-}
-
-function randomLns() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lnsCharacter = lns[Math.floor(Math.random() * lns.length)];
-    document.getElementById("password").innerHTML += lnsCharacter;
-  }
-  return;
-}
-
-function randomUns() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    unsCharacter = uns[Math.floor(Math.random() * uns.length)];
-    document.getElementById("password").innerHTML += unsCharacter;
-  }
-  return;
-}
-
-function randomLn() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lnCharacter = ln[Math.floor(Math.random() * ln.length)];
-    document.getElementById("password").innerHTML += lnCharacter;
-  }
-  return;
-}
-
-function randomLs() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    lsCharacter = ls[Math.floor(Math.random() * ls.length)];
-    document.getElementById("password").innerHTML += lsCharacter;
-  }
-  return;
-}
-
-function randomUn() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    unCharacter = un[Math.floor(Math.random() * un.length)];
-    document.getElementById("password").innerHTML += unCharacter;
-  }
-  return;
-}
-
-function randomUs() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    usCharacter = us[Math.floor(Math.random() * us.length)];
-    document.getElementById("password").innerHTML += usCharacter;
-  }
-  return;
-}
-
-function randomNs() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    nsCharacter = ns[Math.floor(Math.random() * ns.length)];
-    document.getElementById("password").innerHTML += nsCharacter;
-  }
-  return;
-}
-
-function randomU() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    uCharacter = u[Math.floor(Math.random() * u.length)];
-    document.getElementById("password").innerHTML += uCharacter;
-  }
-  return;
-}
-
-function randomN() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    nCharacter = n[Math.floor(Math.random() * n.length)];
-    document.getElementById("password").innerHTML += nCharacter;
-  }
-  return;
-}
-
-function randomS() {
-  document.getElementById("password").innerHTML = "";
-  for (let i = 0; i < Number(passwordLength); i++) {
-    sCharacter = s[Math.floor(Math.random() * s.length)];
-    document.getElementById("password").innerHTML += sCharacter;
-  }
-  return;
-}
