@@ -32,7 +32,7 @@ git clone https://github.com/bpplaysguitar/random-password-generator.git or git 
 
 Screenshot image of the project web page
 
-![](assets/images/screenshot.jpg)
+![](assets/images/.jpg)
 
 ## Credits
 
