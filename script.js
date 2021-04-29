@@ -5,7 +5,7 @@ let charset = [];
 let allowLower = true;
 let allowUpper = true;
 let allowNumber = true;
-let allowSpecial = true;
+let allowSpecial = true
 
 function promptUser() {
   passwordLength = prompt(
@@ -23,7 +23,7 @@ function promptUser() {
   if (!passwordLength) {
     return;
   }
-  
+
   allowLower = confirm(
     "Use lowercase letters to generate password? OK for yes, Cancel for no."
   );
