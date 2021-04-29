@@ -1,17 +1,17 @@
-# development-portfolio
+# random-password-generator
 
-Development Portfolio
+Random Password Generator
 
 See the project live here:
-https://bpplaysguitar.github.io/development-portfolio/
+https://bpplaysguitar.github.io/random-password-generator/
 
-![GitHub top language](https://img.shields.io/github/languages/top/bpplaysguitar/development-portfolio?color=%23ffb3ba&logo=GitHub&logoColor=%23ffb3ba)
+![GitHub top language](https://img.shields.io/github/languages/top/bpplaysguitar/random-password-generator?color=%23ffb3ba&logo=GitHub&logoColor=%23ffb3ba)
 
-![GitHub](https://img.shields.io/github/license/bpplaysguitar/development-portfolio?color=ffffba&logo=GitHub&logoColor=ffffba)
+![GitHub](https://img.shields.io/github/license/bpplaysguitar/random-password-generator?color=ffffba&logo=GitHub&logoColor=ffffba)
 
 ## Description
 
-This project was a useful exercise in practicing my CSS skills in order to be able to replicate a design given to me, as I would see in a workplace from a UX designer. It also brings with it the usefulness beyond homework of being a portfolio in which to put my favorite projects as I progress through coding boot camp. For now, I used one of my favorites from my independent studies before boot camp as a placeholder since I am sure my favroite projects are yet to come in the following months and will be added to this portfolio as I go, along with some customizing of colors and styles to make it own.
+
 
 ## Installation
 
@@ -22,7 +22,7 @@ This project was a useful exercise in practicing my CSS skills in order to be ab
 3. You have Git and Github Desktop installed (https://git-scm.com/downloads, https://desktop.github.com/) and have registered for an account,
 
 4. Clone this repository:
-git clone https://github.com/bpplaysguitar/development-portfolio.git or git clone git@github.com:bpplaysguitar/development-portfolio.git
+git clone https://github.com/bpplaysguitar/random-password-generator.git or git clone git@github.com:bpplaysguitar/random-password-generator.git
 
 5. Create your own repository for the files on GitHub.
 

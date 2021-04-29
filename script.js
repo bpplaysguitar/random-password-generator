@@ -20,6 +20,10 @@ function promptUser() {
       "Error: Password must be 8 to 128 characters. Enter number of characters for your password, 8 to 128."
     );
   }
+  if (!passwordLength) {
+    return;
+  }
+  
   allowLower = confirm(
     "Use lowercase letters to generate password? OK for yes, Cancel for no."
   );
