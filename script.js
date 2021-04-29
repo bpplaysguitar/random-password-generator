@@ -5,7 +5,7 @@ let charset = [];
 let allowLower = true;
 let allowUpper = true;
 let allowNumber = true;
-let allowSpecial = true
+let allowSpecial = true;
 
 function promptUser() {
   passwordLength = prompt(
