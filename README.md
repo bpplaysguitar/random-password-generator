@@ -10,7 +10,7 @@ https://bpplaysguitar.github.io/random-password-generator/
 ![GitHub](https://img.shields.io/github/license/bpplaysguitar/random-password-generator?color=ffffba&logo=GitHub&logoColor=ffffba)
 
 ## Description
-
+This assignment was to use Javascript to create a web application that will generate passwords using random methods, based on user input of character types to be used in the generation of the password. I was able to learn a lot of new ways to use Javascript, including building entire arrays based on front-end user interaction, more in depth "for" loop and "if" statement uses, and I became very familiar with ASCII character codes. I also learned in talking about this with some developer friends, what makes a truly secure password. We went over the math of the possible permutations. In short: the longer the better, more than anything else. It's a gratifying feeling to build a highly functional and truly useful application, test it over and over, and get it work the way you want.
 
 
 ## Installation
@@ -32,7 +32,7 @@ git clone https://github.com/bpplaysguitar/random-password-generator.git or git 
 
 Screenshot image of the project web page
 
-![](assets/images/.jpg)
+![](assets/images/screenshot.jpg)
 
 ## Credits
 

@@ -48,7 +48,6 @@ function fillArray() {
   for (let i = 0; i < passwordLength; i++) {
     passwordArray.push(getRandomCharacter());
   }
-  console.log(passwordArray);
 }
 
 // Get a random number from the character set array (charset), and return it in string form as its ascii character.
