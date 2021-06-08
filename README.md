@@ -30,9 +30,9 @@ git clone https://github.com/bpplaysguitar/random-password-generator.git or git 
 
 ## Usage
 
-Screenshot image of the project web page
+Animation of application in use
 
-![](assets/images/screenshot.jpg)
+![](assets/images/random-passowrd-generator.gif)
 
 ## Credits
 
