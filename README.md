@@ -1,6 +1,7 @@
 # random-password-generator
-
-Random Password Generator
+Brian Palay <br>
+612-202-5710 <br>
+brianpalay@gmail.com
 
 See the project live here:
 https://bpplaysguitar.github.io/random-password-generator/
@@ -37,6 +38,7 @@ git clone https://github.com/bpplaysguitar/random-password-generator.git or git 
 Animation of application in use
 
 ![](assets/images/random-password-generator.gif)
+
 
 ## Credits
 
